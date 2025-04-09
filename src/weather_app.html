@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<section class="weather-box">
+			<div class="nav-bar">
+				<input
+					type="text"
+					id="input"
+					placeholder="Location"
+					maxlength="56"
+				/>
+				<img src="../images/srch_icon.png" alt="srch-icon" id="srch" />
+			</div>
+
+			<div class="main-content">
+				<p class="error"></p>
+				<section class="weather-info">
+					<div class="weather-info-1">
+						<h1 class="location"></h1>
+						<h3 class="continent"></h3>
+						<strong class="weather-type"></strong>
+						<h2 class="temp"></h2>
+					</div>
+					<p class="description"></p>
+					<img class="weather-condition-icon" />
+
+					<div class="humidity icon">
+						<img src="../images/humidity.png" alt="humidty-icon" />
+						<strong></strong>
+					</div>
+
+					<div class="visibility icon">
+						<img
+							src="../images/visibility.png"
+							alt="visibility-icon"
+						/>
+						<strong></strong>
+					</div>
+					<div class="uv-index icon">
+						<img src="../images/uv-index.png" alt="uvIndx-icon" />
+						<strong></strong>
+					</div>
+				</section>
+				<button class="converter">C</button>
+			</div>
+		</section>
+	</body>
+</html>

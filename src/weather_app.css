@@ -1,0 +1,181 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.weather-box {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(#91b3d8,#ced1d6,#f1d3b0);
+}
+
+/* styling nav bar */
+.nav-bar {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.nav-bar #input {
+	width: 400px;
+	padding: 8px;
+	font-size: larger;
+	outline: none;
+	border: none;
+	border-bottom: 3px solid black;
+	border-radius: 100%;
+	text-align: center;
+	font-family: Verdana;
+	background-color: #91b3d800;
+}
+
+.nav-bar #srch {
+	height: 30px;
+	cursor:pointer;
+}
+
+.nav-bar #srch:active {
+	transform: scale(1);
+}
+
+/* styling weather info box*/
+.main-content {
+	width: 100%;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-content .weather-info {
+	width: 500px;
+	height: 500px;
+	border-radius:8px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	justify-items:center;
+	align-items:center;
+	grid-template-areas:
+		"img info-1 info-1"
+		"desc desc desc"
+		"humidity visibility uvIndex";
+    padding:8px;
+	background:url('../images/clear_sky1.jpg') top / cover no-repeat;
+}
+
+.weather-info-1{
+	grid-area:info-1;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:8px;
+	box-shadow:0px 2px 1px 1px rgba(0, 102, 255, 0.295);
+	padding:5px;
+}
+
+.weather-info-1 .location {
+	font-size: 50px;
+}
+
+.weather-info-1 .weather-type{
+	font-size:xx-large;
+	color:rgb(68, 0, 255);
+}
+
+.temp{
+	font-size:70px;
+}
+
+.weather-condition-icon{
+    grid-area:img;
+    justify-self:end;
+	width:80px;
+}
+
+.description{
+    grid-area:desc;
+    font-size:larger;
+    font-weight:lighter;
+    font-style:oblique;
+	text-align:center;
+}
+
+.icon{
+    background-color: rgba(255, 0, 0, 0.034);
+    margin-right:8px;
+    display:flex;
+    flex-direction:column;
+	align-items:center;
+	justify-content: space-around;
+	justify-self:stretch;
+	align-self: stretch;
+}
+
+.icon>strong{
+	color:rgb(216, 186, 19);
+}
+
+.icon>img {
+	width: 70px;
+}
+
+.icon>strong{
+    font-size:xx-large;
+}
+
+.humidity{
+    grid-area:humidity;
+	box-shadow:2px -1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.visibility{
+	grid-area:visibility;
+	box-shadow:2px -1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.uv-index{
+	grid-area:uvIndex;
+	box-shadow:2px -1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+
+.converter{
+	width:70px;
+	font-size:xx-large;
+	border-radius:8px;
+	outline:none;
+	border:none;
+	background-color:#dcd7d3;
+	position:absolute;
+	top:30px;
+	right:100px;
+	font-family:cursive;
+	background-color:black;
+	color:white;
+}
+
+.converter:not(:disabled):hover{
+	background-color:rgba(0, 0, 0, 0.808);
+	cursor:pointer;
+}
+
+.converter:not(:disabled):active{
+	background-color:rgb(0, 0, 0);
+	cursor:pointer;
+}
+
+.converter:disabled{
+	opacity: 0.2;
+}
+
+.error{
+	font-size:100px;
+	font-weight:bolder;
+	color:rgba(255, 0, 0, 0.411);
+}
